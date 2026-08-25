@@ -1,5 +1,5 @@
 # ============================================================
-#  THE VAULT — a text adventure
+#  THE key_area — a text adventure
 #
 #  This already works. Run it before you change anything:
 #
@@ -20,8 +20,8 @@
 # Change these and the game starts differently — try it.
 
 player_name = ""          # we ask for this at the start
-room = "hall"             # where the player is right now
-has_key = False           # True or False — do they have the key?
+room = "room"             # where the player is right now
+has_calculator = True           # True or False — do they have the key?
 moves = 0                 # how many turns they have taken
 
 
@@ -54,18 +54,18 @@ def ask():
 # ---- 3. THE OPENING ------------------------------------------
 
 print("=" * 44)
-print("           THE VAULT")
+print("           The calculator")
 print("=" * 44)
 print()
 
-player_name = input("What is your name, explorer? ").strip()
+player_name = input("Enter your name! ").strip()
 if player_name == "":
-    player_name = "Nobody"          # they just pressed enter
+    player_name = "Hi"          # they just pressed enter
 
 print()
 print("Welcome, " + player_name + ".")
-print("You are standing in a dusty hall. There is a door NORTH")
-print("and a rug on the floor you could LOOK under.")
+print("You have no games in your shelf. You can LOOK around, and walk left or right.")
+print("There is a calculator on the desk, you can pick it up.")
 say("Type HELP if you get stuck, or QUIT to give up.")
 
 
@@ -78,53 +78,58 @@ while True:
     moves = moves + 1
 
     # -- commands that work anywhere ------------------------
-    if command == "quit":
-        say("You walk away. " + player_name + " lasted " + str(moves) + " moves.")
+    if command == "end":
+        say("You ended. " + player_name + " lasted " + str(moves) + " moves.")
         break
 
     elif command == "help":
-        say("Try: LOOK, NORTH, SOUTH, TAKE KEY, OPEN VAULT, QUIT")
+        say("Try: LOOK, RIGHT, LEFT, TAKE CALCULATOR, USE CALCULATOR, END")
 
-    # -- the hall -------------------------------------------
-    elif room == "hall":
+    # -- the room -------------------------------------------
+    elif room == "room":
         if command == "look":
-            if has_key:
-                say("Just a rug, and the hole where the key was.")
+            if has_calculator:
+                say("You have grabbed the calculator. You see a door to your left and a key enterance to your right.")
             else:
-                say("Under the rug: a small brass KEY.")
+                say("You see a door to your left and a key enterance to your right.")
 
-        elif command == "take key":
-            if has_key:
-                say("You already have it.")
+        elif command == "take calculator":
+            if has_calculator:
+                say("You have the calculator. It last did the expression 2^11. You can either go right or left.")
             else:
-                has_key = True
-                say("You pocket the key. It is colder than it should be.")
+                has_calculator = True
+                say("You have the calculator. You can either go right or left.")
 
-        elif command == "north":
-            room = "vault"
-            print("You step into a room with a huge steel door. The VAULT.")
-            say("There is a way back SOUTH.")
+        elif command == "right":
+            room = "key_area"
+            print("You go toward a huge key crate. You can unlock it with a calculator code.")
+            say("You can also go back with left.")
+
+        elif command == "left":
+            room = "door_area"
+            print("You walk toward the door. There is nothing out in the hallway.")
+            say("You can also go back with right.")
 
         else:
             say("You cannot do that here.")
 
-    # -- the vault ------------------------------------------
-    elif room == "vault":
+    # -- the key_area ------------------------------------------
+    elif room == "key_area":
         if command == "look":
             say("A steel door with a small keyhole. It is shut.")
 
         elif command == "south":
-            room = "hall"
-            say("Back in the dusty hall.")
+            room = "room"
+            say("Back in the dusty room.")
 
-        elif command == "open vault":
-            if has_key:
-                print("The key turns. The door swings open.")
-                print("Inside: absolutely nothing. Someone beat you here.")
-                say("You win anyway, " + player_name + " — in " + str(moves) + " moves.")
+        elif command == "use calculator":
+            if has_calculator:
+                print("The calculator is stamped onto the open space. The key code is entered.")
+                print("The calculator key code opens a door in the wall. You wonder what is there..")
+                say("You have beaten the game for now, " + player_name + " — in " + str(moves) + " moves.")
                 break
             else:
-                say("It is locked. You need a key.")
+                say("It is locked. You can use your calculator.")
 
         else:
             say("You cannot do that here.")
@@ -138,8 +143,8 @@ while True:
 #
 #  1. Change the room descriptions so it is your world, not mine.
 #
-#  2. Add a third room. Copy the `elif room == "vault":` block,
-#     change the room name, and give the hall a way to reach it.
+#  2. Add a third room. Copy the `elif room == "key_area":` block,
+#     change the room name, and give the room a way to reach it.
 #
 #  3. Add something to pick up, the way has_key works. A lamp?
 #     Then make one room too dark to LOOK in without it.
