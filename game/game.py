@@ -21,7 +21,7 @@
 
 player_name = ""          # we ask for this at the start
 room = "room"             # where the player is right now
-has_calculator = True           # True or False — do they have the key?
+has_calculator = False           # True or False — do they have the key?
 moves = 0                 # how many turns they have taken
 
 
@@ -45,7 +45,7 @@ def ask():
     """Ask the player what they want to do and hand back a tidy answer.
 
     .strip() removes spaces they typed by accident.
-    .lower() means GO NORTH, go north and Go North all work the same.
+    .lower() means  right and left all work the same.
     Without these two, your game feels broken even when your logic is right.
     """
     return input("> ").strip().lower()
@@ -91,7 +91,7 @@ while True:
             if has_calculator:
                 say("You have grabbed the calculator. You see a door to your left and a key enterance to your right.")
             else:
-                say("You see a door to your left and a key enterance to your right.")
+                say("You see a door to your left and a key enterance to your right. The calculator is on the desk.")
 
         elif command == "take calculator":
             if has_calculator:
@@ -116,23 +116,41 @@ while True:
     # -- the key_area ------------------------------------------
     elif room == "key_area":
         if command == "look":
-            say("A steel door with a small keyhole. It is shut.")
-
-        elif command == "south":
+            say("There is a space on the key crate where you can place a calculator.")
+        elif command == "left":
             room = "room"
-            say("Back in the dusty room.")
+            say("You are back in the middle of the room, staring and seeing no games on your shelf.")
 
         elif command == "use calculator":
             if has_calculator:
-                print("The calculator is stamped onto the open space. The key code is entered.")
+                print("The calculator is stamped onto the open space. The key code 2048 is entered.")
                 print("The calculator key code opens a door in the wall. You wonder what is there..")
                 say("You have beaten the game for now, " + player_name + " — in " + str(moves) + " moves.")
                 break
             else:
-                say("It is locked. You can use your calculator.")
+                say("The key crate is locked. You can use a calculator to unlock.")
 
         else:
-            say("You cannot do that here.")
+            say("That action is not possible here.")
+
+    # -- the door_area -----------------------------------------
+    elif room == "door_area":
+        if command == "look":
+            say("There is nothing out in the hallway, as it is too dark to see anything. The room is back to your right.")
+
+        elif command == "right":
+            room = "room"
+            say("You are back in the middle of the room, staring and seeing no games on your shelf.")
+
+        elif command == "left":
+            room = "dark_hallway"
+            say("You start going down the hallway. You can see something at the end of the hallway emitting light. You can go back with right.")
+    # -- the dark hallway -----------------------------------------
+    elif room == "dark_hallway":
+        if command == "look":
+            say("You can see something at the end of the hallway emitting light. You can go back with right, or continue into the dark.")
+        else:
+            say("That action is not possible here.")
 
 
 # ============================================================
@@ -141,13 +159,13 @@ while True:
 #  Do these in order. Run the game after EVERY one — if it
 #  breaks you will know exactly which change did it.
 #
-#  1. Change the room descriptions so it is your world, not mine.
+#  1. Change the room descriptions so it is your world, not mine. (Complete)
 #
 #  2. Add a third room. Copy the `elif room == "key_area":` block,
-#     change the room name, and give the room a way to reach it.
+#     change the room name, and give the room a way to reach it. (Complete)
 #
 #  3. Add something to pick up, the way has_key works. A lamp?
-#     Then make one room too dark to LOOK in without it.
+#     Then make one room too dark to LOOK in without it. (Complete)
 #
 #  4. Add a limit: if moves gets past 20, something happens.
 #
