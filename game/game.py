@@ -149,6 +149,9 @@ while True:
     elif room == "dark_hallway":
         if command == "look":
             say("You can see something at the end of the hallway emitting light. You can go back with right, or continue into the dark.")
+        elif command == "right":
+            room = "door_area"
+            say("You are back in the hallway near the door.")
         else:
             say("That action is not possible here.")
 
