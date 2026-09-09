@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10151d">
+  <title>Facet Cards | CSS Motion Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="page-shell">
+    <header class="intro">
+      <p class="eyebrow">CSS motion lab / 01</p>
+      <h1>Facet cards</h1>
+      <p class="lede">A flexbox gallery of modern card animations built with CSS only. Every shape is a polygon, every
+        motion has a purpose.</p>
+    </header>
+
+    <section class="card-grid" aria-label="Animated card examples">
+      <article class="card card--rise">
+        <div class="card__facet" aria-hidden="true"></div>
+        <div class="card__topline"><span>01</span><span class="status">ready</span></div>
+        <div class="card__content">
+          <p class="card__label">Entrance</p>
+          <h2>Lift off</h2>
+          <p>Staggered reveal, soft blur, and a small translate create a calm first impression.</p>
+        </div>
+        <div class="card__footer"><span>fade + rise</span><span class="arrow">&#8599;</span></div>
+      </article>
+
+      <article class="card card--tilt">
+        <div class="card__facet" aria-hidden="true"></div>
+        <div class="card__topline"><span>02</span><span class="status">hover</span></div>
+        <div class="card__content">
+          <p class="card__label">Interaction</p>
+          <h2>Parallax tilt</h2>
+          <p>Layered polygons shift at different rates when the card rises toward you.</p>
+        </div>
+        <div class="card__footer"><span>perspective</span><span class="arrow">&#8599;</span></div>
+      </article>
+
+      <article class="card card--shimmer">
+        <div class="card__facet" aria-hidden="true"></div>
+        <div class="card__topline"><span>03</span><span class="status">loop</span></div>
+        <div class="card__content">
+          <p class="card__label">Surface</p>
+          <h2>Prism sweep</h2>
+          <p>A clipped highlight travels across the surface while the facets gently breathe.</p>
+        </div>
+        <div class="card__footer"><span>shimmer</span><span class="arrow">&#8599;</span></div>
+      </article>
+
+      <article class="card card--orbit">
+        <div class="card__facet" aria-hidden="true"></div>
+        <div class="card__topline"><span>04</span><span class="status">loop</span></div>
+        <div class="card__content">
+          <p class="card__label">Ambient</p>
+          <h2>Orbit points</h2>
+          <p>Two geometric satellites orbit the card edge to give a still layout a pulse.</p>
+        </div>
+        <div class="card__footer"><span>float + orbit</span><span class="arrow">&#8599;</span></div>
+      </article>
+
+      <article class="card card--border">
+        <div class="card__facet" aria-hidden="true"></div>
+        <div class="card__topline"><span>05</span><span class="status">focus</span></div>
+        <div class="card__content">
+          <p class="card__label">Feedback</p>
+          <h2>Edge signal</h2>
+          <p>Focus and hover wake the angular border, keeping interaction visible and tactile.</p>
+        </div>
+        <div class="card__footer"><span>focus ring</span><span class="arrow">&#8599;</span></div>
+      </article>
+
+      <article class="card card--morph">
+        <div class="card__facet" aria-hidden="true"></div>
+        <div class="card__topline"><span>06</span><span class="status">loop</span></div>
+        <div class="card__content">
+          <p class="card__label">Transformation</p>
+          <h2>Shape shift</h2>
+          <p>Polygon vertices morph slowly, making the card feel like a living mineral.</p>
+        </div>
+        <div class="card__footer"><span>morph</span><span class="arrow">&#8599;</span></div>
+      </article>
+    </section>
+
+    <footer class="page-footer">
+      <span>display: flex</span>
+      <span>clip-path: polygon()</span>
+      <span>prefers-reduced-motion: supported</span>
+    </footer>
+  </main>
+</body>
+
+</html>
