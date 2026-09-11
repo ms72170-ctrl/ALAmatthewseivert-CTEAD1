@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  --ink: #f2f0e9;
-  --muted: #9fa5ad;
-  --line: rgba(242, 240, 233, .14);
-  --night: #10151d;
-  --orange: #ff7657;
-  --aqua: #56d6c2;
-  --yellow: #f4c95d;
-  --violet: #b49cff;
+  --ink: #ffffff;
+  --muted: #a7abaf;
+  --line: rgba(238, 235, 225, 0.14);
+  --night: #051020;
+  --orange: #ff6e4d;
+  --aqua: #5bffe6;
+  --yellow: #ffd25f;
+  --violet: #b298ff;
 }
 
 * {
@@ -113,7 +113,7 @@ h1 {
   overflow: hidden;
   padding: 24px;
   border: 1px solid var(--line);
-  background: #171d26;
+  background: #03122c;
   isolation: isolate;
   animation: card-in .75s cubic-bezier(.2, .8, .2, 1) both;
   transition: transform .45s cubic-bezier(.2, .8, .2, 1), border-color .45s ease, box-shadow .45s ease;
@@ -273,7 +273,7 @@ h1 {
   background: var(--accent);
   width: 8px;
   height: 8px;
-  inset: auto 22px 23px auto;
+  inset: auto 23px 23px auto;
   animation: dot-orbit 4s ease-in-out infinite;
 }
 
