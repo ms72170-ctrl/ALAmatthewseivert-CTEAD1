@@ -4,9 +4,9 @@
 /* ── DAY 1 · TODO 5: your colours ─────────────────────────────────────────
    Change these two to colours YOU picked. Everything on the page uses them. */
 :root {
-  --main: #1d3160;     /* the background of the header and the button */
-  --accent: #f5c842;   /* the colour that pops */
-  --text: #13182a;
+  --main: #0080ff;     /* the background of the header and the button */
+  --accent: #0004ff;   /* the colour that pops */
+  --text: #000000;
   --paper: #f7f8fb;
 
   /* the spacing scale: use only these three */
