@@ -10,15 +10,15 @@
 
 // ─────────────── DAY 2 · Wire the click ───────────────
 // TODO 1: find the button by its id. The # means "id".
-// const button = document.querySelector("#action");
+const button = document.querySelector("#action");
 
 // TODO 2: find the paragraph JavaScript writes into.
-// const output = document.querySelector("#output");
+const output = document.querySelector("#output");
 
 // TODO 3: when the button is clicked, change the words on the page.
-// button.addEventListener("click", function () {
-//   output.textContent = "You clicked it!";
-// });
+button.addEventListener("click", function () {
+  output.textContent = "You clicked it!";
+  });
 
 
 // ─────────────── DAY 3 · Make it YOUR thing ───────────────
