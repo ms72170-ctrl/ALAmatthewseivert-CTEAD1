@@ -17,7 +17,7 @@ const output = document.querySelector("#output");
 
 // TODO 3: when the button is clicked, change the words on the page.
 button.addEventListener("click", function () {
-  output.textContent = "You clicked it!";
+  output.textContent = "Additional info: If you study large numbers, you are a googologist!";
   });
 
 
