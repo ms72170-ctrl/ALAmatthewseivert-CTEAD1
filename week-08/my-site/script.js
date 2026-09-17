@@ -26,9 +26,10 @@ button.addEventListener("click", function () {
 //         Put it HERE, at the top of this section, not inside a function.
 let counter = 0;
 // TODO 2: a function that changes the variable and shows the new value on the page.
+const countOutput = document.querySelector("#count-output");
 function counterIncrease() {
   counter = counter + 1;
-  output.textContent = counter;
+  countOutput.textContent = counter;
 }
 // TODO 3: make the button run your function (you can replace the Day 2 listener).
 const counterButton = document.querySelector("#count");
