@@ -24,11 +24,14 @@ button.addEventListener("click", function () {
 // ─────────────── DAY 3 · Make it YOUR thing ───────────────
 // TODO 1: a variable that remembers something between clicks.
 //         Put it HERE, at the top of this section, not inside a function.
-
+let counter = 0;
 // TODO 2: a function that changes the variable and shows the new value on the page.
-
+function counterIncrease() {
+  counter = counter + 1;
+  output.textContent = counter;
+}
 // TODO 3: make the button run your function (you can replace the Day 2 listener).
-
+button.addEventListener("click", counterIncrease);
 
 // ─────────────── DAY 4 · Level up ───────────────
 // ONE upgrade. Retype it and be able to explain every line.

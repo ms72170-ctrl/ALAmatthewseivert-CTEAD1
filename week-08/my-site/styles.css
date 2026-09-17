@@ -10,9 +10,9 @@
   --paper: #f7f8fb;
 
   /* the spacing scale: use only these three */
-  --space-s: 8px;
-  --space-m: 16px;
-  --space-l: 32px;
+  --space-s: 10px;
+  --space-m: 20px;
+  --space-l: 40px;
 }
 
 /* ── the page ───────────────────────────────────────────────────────────── */
