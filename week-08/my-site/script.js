@@ -31,6 +31,7 @@ function counterIncrease() {
   output.textContent = counter;
 }
 // TODO 3: make the button run your function (you can replace the Day 2 listener).
+const button = document.querySelector("#count");
 button.addEventListener("click", counterIncrease);
 
 // ─────────────── DAY 4 · Level up ───────────────
