@@ -37,3 +37,15 @@ counterButton.addEventListener("click", counterIncrease);
 
 // ─────────────── DAY 4 · Level up ───────────────
 // ONE upgrade. Retype it and be able to explain every line.
+const messages = [
+  "Googology studies extremely large numbers.",
+  "A googologist explores names and patterns for huge numbers.",
+  "Some large numbers are much bigger than anything we can imagine."
+];
+
+let messageIndex = 0;
+
+button.addEventListener("click", function () {
+  output.textContent = messages[messageIndex];
+  messageIndex = (messageIndex + 1) % messages.length;
+});

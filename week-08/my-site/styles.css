@@ -80,6 +80,14 @@ body {
 }
 
 /* DAY 4: give your button a hover state and a focus state here */
+#action:hover {
+  filter: brightness(1.15);
+}
+
+#action:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
 
 #output {
   font-size: 1.2rem;
