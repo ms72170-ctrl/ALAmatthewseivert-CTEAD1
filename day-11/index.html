@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="A visual field guide to googology, the study of naming and comparing extremely large numbers.">
+  <title>Beyond Counting | A field guide to googology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Beyond Counting home">
+      <span class="brand-mark">10<sup>100</sup></span>
+      <span>BEYOND<br>COUNTING</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#why">Why it exists</a>
+      <a href="#ladder">The ladder</a>
+      <a href="#frontier">The frontier</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> A field guide to googology</p>
+        <h1>When numbers get too big for <em>words.</em></h1>
+        <p class="hero-intro">Googology is the playful, rigorous study of very large numbers: how to build them,
+          describe them, compare them, and discover where ordinary notation finally breaks.</p>
+        <a class="button button-dark" href="#basics">Start at the beginning <span aria-hidden="true">&#8595;</span></a>
+      </div>
+      <div class="hero-art reveal" aria-label="A visual scale showing numbers growing beyond a googol" role="img">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+        <div class="hero-number">10<sup>100</sup></div>
+        <p class="orbit-label label-one">a googol</p>
+        <p class="orbit-label label-two">a googolplex</p>
+        <p class="orbit-label label-three">and still growing</p>
+        <span class="hero-cross cross-one"></span>
+        <span class="hero-cross cross-two"></span>
+      </div>
+    </section>
+
+    <section class="definition band" id="why">
+      <div class="section-grid definition-grid">
+        <p class="section-number">01 / ORIENTATION</p>
+        <div class="definition-content reveal">
+          <h2>So, what <em>is</em> googology?</h2>
+          <p class="lead">The word comes from <strong>googol</strong>, the name for <span
+              class="inline-formula">10<sup>100</sup></span>. Googology is not a
+            single official branch of mathematics. It is a community and a collection of tools for exploring numbers
+            that are far beyond everyday experience.</p>
+          <div class="definition-notes">
+            <div><span class="note-icon">01</span>
+              <p><strong>Mathematical googology</strong><br>Studies precisely defined large numbers that appear in
+                proofs, combinatorics, logic, and computer science.</p>
+            </div>
+            <div><span class="note-icon">02</span>
+              <p><strong>Recreational googology</strong><br>Invents notations and names for numbers, then tests how
+                efficiently those systems can climb.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="purpose section-grid" id="purpose">
+      <div class="purpose-copy reveal">
+        <p class="eyebrow">Why does it exist?</p>
+        <h2>Big numbers are a laboratory for ideas.</h2>
+        <p>Googology turns “bigger” into a precise question. It helps us see the difference between a number that is
+          merely long to write and one that needs a completely new language.</p>
+        <p>These ideas are useful far beyond a leaderboard. Fast-growing functions model computation; enormous finite
+          numbers appear in proofs; and notation design teaches us how definitions can compress a universe of structure.
+        </p>
+      </div>
+      <div class="use-cases reveal">
+        <article><span>USE 01</span>
+          <h3>Compare growth</h3>
+          <p>Ask whether exponentiation, factorials, or a recursive process grows faster.</p>
+        </article>
+        <article><span>USE 02</span>
+          <h3>Compress complexity</h3>
+          <p>Give a precise short name to a number that could never be written digit by digit.</p>
+        </article>
+        <article><span>USE 03</span>
+          <h3>Explore limits</h3>
+          <p>Push notation until questions about definitions, computability, and infinity appear.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="basics band" id="basics">
+      <div class="section-grid">
+        <p class="section-number">02 / THE BASICS</p>
+        <div class="basics-content">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Start small. Then notice the pattern.</p>
+            <h2>Every giant number begins with a familiar move.</h2>
+          </div>
+          <div class="ladder-cards" id="ladder">
+            <article class="ladder-card reveal"><span class="step">STEP 01</span>
+              <div class="ladder-value">10 + 10</div>
+              <h3>Addition</h3>
+              <p>Repeated addition makes a total. It is the first way we combine quantities.</p>
+            </article>
+            <article class="ladder-card reveal"><span class="step">STEP 02</span>
+              <div class="ladder-value">10 &times; 10</div>
+              <h3>Multiplication</h3>
+              <p>Repeated addition becomes a shortcut. Groups of groups give us scale.</p>
+            </article>
+            <article class="ladder-card ladder-card-hot reveal"><span class="step">STEP 03</span>
+              <div class="ladder-value">10<sup>10</sup></div>
+              <h3>Exponentiation</h3>
+              <p>Repeated multiplication is where growth starts to feel vertical.</p>
+            </article>
+            <article class="ladder-card reveal"><span class="step">STEP 04</span>
+              <div class="ladder-value">10<sup>10<sup>10</sup></sup></div>
+              <h3>Tetration</h3>
+              <p>Repeated exponentiation builds a power tower. The notation needs help keeping up.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="named-numbers section-grid">
+      <div class="section-heading reveal">
+        <p class="eyebrow">A few landmarks</p>
+        <h2>Numbers you can name, even when you cannot write them.</h2>
+      </div>
+      <div class="number-table reveal">
+        <div class="table-row table-head"><span>NAME</span><span>DEFINITION</span><span>WHY IT MATTERS</span></div>
+        <div class="table-row"><span class="number-name">Googol</span><span
+            class="formula">10<sup>100</sup></span><span>A 1 followed by 100 zeroes. Huge, but still easy to
+            define.</span></div>
+        <div class="table-row"><span class="number-name">Googolplex</span><span
+            class="formula">10<sup>10<sup>100</sup></sup></span><span>A 1 followed by a googol zeroes. Writing it out is
+            physically impossible.</span></div>
+        <div class="table-row"><span class="number-name">Graham's number</span><span
+            class="formula">g<sub>64</sub></span><span>A finite number from Ramsey theory, defined with a sequence of
+            escalating arrows.</span></div>
+      </div>
+    </section>
+
+    <section class="builder band">
+      <div class="section-grid builder-grid">
+        <div class="builder-copy reveal">
+          <p class="eyebrow">Try the notation</p>
+          <h2>How fast can a notation climb?</h2>
+          <p>Choose an operation and a height. The exact digits disappear quickly, but the definition stays clear. That
+            is the central trick of googology.</p><label for="operation">Operation</label><select id="operation">
+            <option value="power">Exponentiation</option>
+            <option value="tower">Tetration</option>
+            <option value="arrow">Pentational hint</option>
+          </select><label for="height">Height: <output id="height-output">3</output></label><input id="height"
+            type="range" min="1" max="8" value="3">
+          <p class="builder-note" id="builder-note">A stack of 3 powers: 10^(10^10).</p>
+        </div>
+        <div class="builder-display reveal">
+          <p class="display-label">YOUR NUMBER</p>
+          <div id="builder-result" class="builder-result">10<sup>10<sup>10</sup></sup></div>
+          <div class="scale-line"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="scale-caption"><span>ordinary</span><span>unwriteable</span><span>notation required</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="frontier section-grid" id="frontier">
+      <div class="frontier-heading reveal">
+        <p class="section-number">03 / THE FRONTIER</p>
+        <p class="eyebrow">Advanced territory</p>
+        <h2>At the edge, the notation becomes the subject.</h2>
+        <p>Once exponentiation and power towers are not enough, googologists build systems that refer to their own
+          rules. The challenge is no longer just “what is bigger?” but “what can be defined, computed, or proved?”</p>
+      </div>
+      <div class="frontier-list">
+        <details class="frontier-item reveal" open>
+          <summary><span>01</span><strong>Fast-growing hierarchies</strong><b>+</b></summary>
+          <p>Instead of one operation, a hierarchy assigns each level a new growth rule. The fast-growing hierarchy uses
+            ordinal-indexed levels, letting mathematicians compare functions that all outpace familiar operations.</p>
+        </details>
+        <details class="frontier-item reveal">
+          <summary><span>02</span><strong>Conway chained arrows</strong><b>+</b></summary>
+          <p>Chained arrow notation extends the idea behind Knuth's up-arrows. It is compact enough to define numbers
+            vastly beyond Graham's number, while still following a precise recursive grammar.</p>
+        </details>
+        <details class="frontier-item reveal">
+          <summary><span>03</span><strong>Busy Beaver</strong><b>+</b></summary>
+          <p>BB(n) asks for the most steps a halting n-state Turing machine can take. It eventually grows faster than
+            every computable function, tying googology directly to the limits of algorithms.</p>
+        </details>
+        <details class="frontier-item reveal">
+          <summary><span>04</span><strong>Countable infinity and beyond</strong><b>+</b></summary>
+          <p>Large finite numbers are not infinity. Ordinals and cardinals describe different kinds of infinite size,
+            and their arithmetic opens a different chapter after the googological frontier.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="takeaway band">
+      <div class="takeaway-inner reveal">
+        <p class="eyebrow">One last idea</p>
+        <h2>The number is not the digits.<br><em>The number is the definition.</em></h2>
+        <p>Googology gives us a way to stay precise after writing every digit has stopped being an option.</p><a
+          class="button button-light" href="#top">Back to the top <span aria-hidden="true">&#8593;</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>BEYOND COUNTING / DAY 11</span><span>A field guide to googology</span></footer>
+</body>
+
+</html>

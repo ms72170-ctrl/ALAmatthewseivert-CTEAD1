@@ -1,51 +1,57 @@
-// script.js — your Week 8 project. One file, four days.
-// Work on ONE day's section at a time. Save (commit and push) at every save point.
+const baseInput = document.querySelector("#base");
+const heightInput = document.querySelector("#height");
+const baseValue = document.querySelector("#base-value");
+const heightValue = document.querySelector("#height-value");
+const numberDisplay = document.querySelector("#number-display");
+const numberExplanation = document.querySelector("#number-explanation");
+const scaleFill = document.querySelector("#scale-fill");
+const scaleCaption = document.querySelector("#scale-caption-value");
+const operationButtons = document.querySelectorAll(".operation");
+let operation = "power";
 
-// ─────────────── DAY 1 · Say hello ───────────────
-// TODO: make JavaScript print a message in the console.
-//       Your message shows in the Console panel at the bottom of your page.
-//       Remove the two slashes at the start of the next line, then save and reload.
-console.log("This is the Javascript console");
-
-
-// ─────────────── DAY 2 · Wire the click ───────────────
-// TODO 1: find the button by its id. The # means "id".
-const button = document.querySelector("#action");
-
-// TODO 2: find the paragraph JavaScript writes into.
-const output = document.querySelector("#output");
-
-// TODO 3: when the button is clicked, change the words on the page.
-button.addEventListener("click", function () {
-  output.textContent = "Additional info: If you study large numbers, you are a googologist!";
-  });
-
-
-// ─────────────── DAY 3 · Make it YOUR thing ───────────────
-// TODO 1: a variable that remembers something between clicks.
-//         Put it HERE, at the top of this section, not inside a function.
-let counter = 0;
-// TODO 2: a function that changes the variable and shows the new value on the page.
-const countOutput = document.querySelector("#count-output");
-function counterIncrease() {
-  counter = counter + 1;
-  countOutput.textContent = counter;
+function powerTower(base, height) {
+  let value = base;
+  for (let step = 1; step < height; step += 1) {
+    if (value > 1000000) return Infinity;
+    value = base ** value;
+  }
+  return value;
 }
-// TODO 3: make the button run your function (you can replace the Day 2 listener).
-const counterButton = document.querySelector("#count");
-counterButton.addEventListener("click", counterIncrease);
 
-// ─────────────── DAY 4 · Level up ───────────────
-// ONE upgrade. Retype it and be able to explain every line.
-const messages = [
-  "Googology studies extremely large numbers.",
-  "A googologist explores names and patterns for huge numbers.",
-  "Some large numbers are much bigger than anything we can imagine."
-];
+function updateExplorer() {
+  const base = Number(baseInput.value);
+  const height = Number(heightInput.value);
+  baseValue.value = base;
+  heightValue.value = height;
+  let value;
+  let explanation;
+  if (operation === "power") {
+    value = base ** height;
+    explanation = `${base} multiplied by itself ${height} times.`;
+  } else if (operation === "tower") {
+    value = powerTower(base, height);
+    explanation = `${base} is stacked as a power tower ${height} levels high.`;
+  } else {
+    value = height > 1 ? Infinity : base;
+    explanation = `${base} with ${height} arrows: each arrow repeats the operation above it.`;
+  }
 
-let messageIndex = 0;
+  const isHuge = !Number.isFinite(value) || value > 999999999;
+  numberDisplay.textContent = isHuge ? `10^${operation === "arrow" ? "10^" : "many"}` : value.toLocaleString();
+  numberExplanation.textContent = explanation;
+  const scale = isHuge ? 100 : Math.min(92, 15 + Math.log10(Math.max(value, 1)) * 13);
+  scaleFill.style.width = `${scale}%`;
+  scaleCaption.textContent = isHuge ? "notation required" : scale > 60 ? "hard to picture" : "small, but growing";
+}
 
-button.addEventListener("click", function () {
-  output.textContent = messages[messageIndex];
-  messageIndex = (messageIndex + 1) % messages.length;
+baseInput.addEventListener("input", updateExplorer);
+heightInput.addEventListener("input", updateExplorer);
+operationButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    operation = button.dataset.operation;
+    operationButtons.forEach((item) => item.classList.toggle("active", item === button));
+    updateExplorer();
+  });
 });
+
+updateExplorer();
