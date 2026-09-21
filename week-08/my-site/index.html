@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An illustrated guide to googology, the study of naming and comparing extremely large numbers.">
+  <meta name="description"
+    content="An illustrated guide to googology, the study of naming and comparing extremely large numbers.">
   <title>Beyond Counting | A field guide to googology</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -26,14 +27,16 @@
       <div class="hero-copy">
         <p class="eyebrow">A field guide to googology · 01—06</p>
         <h1>When numbers outgrow <em>intuition.</em></h1>
-        <p class="hero-lede">Googology is the study and creation of names, notations, and systems for extremely large numbers. Start with a million. Leave with a new sense of scale.</p>
+        <p class="hero-lede">Googology is the study and creation of names, notations, and systems for extremely large
+          numbers. Start with a million. Leave with a new sense of scale.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#why">Start the field guide <span>↓</span></a>
           <a class="text-link" href="#explorer">Skip to the interactive explorer →</a>
         </div>
       </div>
       <div class="hero-orbit" aria-label="A visual showing numbers growing beyond ordinary scale">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
         <div class="orbit-label label-million">10<sup>6</sup><small>million</small></div>
         <div class="orbit-label label-googol">10<sup>100</sup><small>googol</small></div>
         <div class="orbit-label label-arrow">↑<small>growth is the point</small></div>
@@ -43,50 +46,164 @@
 
     <section class="intro-band" id="why">
       <div class="wrap two-column">
-        <div><p class="section-number">01 / orientation</p><h2>What is googology?</h2></div>
-        <div class="prose"><p>Googology is an informal field built around <strong>very large finite numbers</strong>. It asks: How can we describe a number so enormous that writing all its digits is impossible?</p><p>The answer is not just “add more zeroes.” Googologists invent compact notation and compare the rules that generate numbers. The focus is on <em>how fast a definition grows</em>, not on memorizing a long list of names.</p></div>
+        <div>
+          <p class="section-number">01 / orientation</p>
+          <h2>What is googology?</h2>
+        </div>
+        <div class="prose">
+          <p>Googology is an informal field built around <strong>very large finite numbers</strong>. It asks: How can we
+            describe a number so enormous that writing all its digits is impossible?</p>
+          <p>The answer is not just “add more zeroes.” Googologists invent compact notation and compare the rules that
+            generate numbers. The focus is on <em>how fast a definition grows</em>, not on memorizing a long list of
+            names.</p>
+        </div>
       </div>
     </section>
 
     <section class="wrap why-grid">
-      <div><p class="section-number">02 / purpose</p><h2>Why does googology exist?</h2><p class="muted">It is a laboratory for mathematical language. The numbers are fictional in the sense that most cannot be physically written down, but the definitions can be exact.</p></div>
+      <div>
+        <p class="section-number">02 / purpose</p>
+        <h2>Why does googology exist?</h2>
+        <p class="muted">It is a laboratory for mathematical language. The numbers are fictional in the sense that most
+          cannot be physically written down, but the definitions can be exact.</p>
+      </div>
       <div class="reason-list">
-        <article><span class="reason-icon">↗</span><div><h3>To measure growth</h3><p>Exponentiation, tetration, and beyond give us a vocabulary for comparing different kinds of “huge.”</p></div></article>
-        <article><span class="reason-icon">⌘</span><div><h3>To compress ideas</h3><p>Notation acts like a program: a short recipe can specify a number with more digits than the universe could store.</p></div></article>
-        <article><span class="reason-icon">◎</span><div><h3>To explore limits</h3><p>It connects recreational math to proof theory, computer science, combinatorics, and the question of what can be defined.</p></div></article>
+        <article><span class="reason-icon">↗</span>
+          <div>
+            <h3>To measure growth</h3>
+            <p>Exponentiation, tetration, and beyond give us a vocabulary for comparing different kinds of “huge.”</p>
+          </div>
+        </article>
+        <article><span class="reason-icon">⌘</span>
+          <div>
+            <h3>To compress ideas</h3>
+            <p>Notation acts like a program: a short recipe can specify a number with more digits than the universe
+              could store.</p>
+          </div>
+        </article>
+        <article><span class="reason-icon">◎</span>
+          <div>
+            <h3>To explore limits</h3>
+            <p>It connects recreational math to proof theory, computer science, combinatorics, and the question of what
+              can be defined.</p>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="ladder-section" id="ladder">
-      <div class="wrap"><p class="section-number">03 / the ladder</p><div class="section-heading"><h2>Build a bigger operation</h2><p>Each rung repeats the one before it. That repetition is where scale begins to break.</p></div>
+      <div class="wrap">
+        <p class="section-number">03 / the ladder</p>
+        <div class="section-heading">
+          <h2>Build a bigger operation</h2>
+          <p>Each rung repeats the one before it. That repetition is where scale begins to break.</p>
+        </div>
         <div class="ladder-grid">
-          <article class="ladder-card"><span class="rung">01</span><h3>Counting</h3><div class="formula">n + 1</div><p>Add one. The familiar engine behind every finite number.</p><span class="example">10 → 11</span></article>
-          <article class="ladder-card"><span class="rung">02</span><h3>Addition</h3><div class="formula">a + a + a</div><p>Repeated counting. Three groups of <em>a</em>.</p><span class="example">3 + 3 + 3 = 9</span></article>
-          <article class="ladder-card"><span class="rung">03</span><h3>Multiplication</h3><div class="formula">a × b</div><p>Repeated addition. A grid of equal groups.</p><span class="example">3 × 3 = 9</span></article>
-          <article class="ladder-card"><span class="rung">04</span><h3>Exponentiation</h3><div class="formula">a<sup>b</sup></div><p>Repeated multiplication. This is where numbers take off.</p><span class="example">10<sup>3</sup> = 1,000</span></article>
-          <article class="ladder-card featured-rung"><span class="rung">05</span><h3>Tetration</h3><div class="formula">a ↑↑ b</div><p>Repeated exponentiation. A power tower, built from the top down.</p><span class="example">3 ↑↑ 3 = 3<sup>3<sup>3</sup></sup></span></article>
+          <article class="ladder-card"><span class="rung">01</span>
+            <h3>Counting</h3>
+            <div class="formula">n + 1</div>
+            <p>Add one. The familiar engine behind every finite number.</p><span class="example">10 → 11</span>
+          </article>
+          <article class="ladder-card"><span class="rung">02</span>
+            <h3>Addition</h3>
+            <div class="formula">a + a + a</div>
+            <p>Repeated counting. Three groups of <em>a</em>.</p><span class="example">3 + 3 + 3 = 9</span>
+          </article>
+          <article class="ladder-card"><span class="rung">03</span>
+            <h3>Multiplication</h3>
+            <div class="formula">a × b</div>
+            <p>Repeated addition. A grid of equal groups.</p><span class="example">3 × 3 = 9</span>
+          </article>
+          <article class="ladder-card"><span class="rung">04</span>
+            <h3>Exponentiation</h3>
+            <div class="formula">a<sup>b</sup></div>
+            <p>Repeated multiplication. This is where numbers take off.</p><span class="example">10<sup>3</sup> =
+              1,000</span>
+          </article>
+          <article class="ladder-card featured-rung"><span class="rung">05</span>
+            <h3>Tetration</h3>
+            <div class="formula">a ↑↑ b</div>
+            <p>Repeated exponentiation. A power tower, built from the top down.</p><span class="example">3 ↑↑ 3 =
+              3<sup>3<sup>3</sup></sup></span>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="explorer wrap" id="explorer">
-      <div class="explorer-heading"><div><p class="section-number">04 / make it move</p><h2>Growth explorer</h2></div><p>Choose an operation and see how quickly the description changes. The display uses logarithms once the exact value becomes too large to show.</p></div>
+      <div class="explorer-heading">
+        <div>
+          <p class="section-number">04 / make it move</p>
+          <h2>Growth explorer</h2>
+        </div>
+        <p>Choose an operation and see how quickly the description changes. The display uses logarithms once the exact
+          value becomes too large to show.</p>
+      </div>
       <div class="explorer-panel">
-        <div class="control-column"><label for="base">Base <output id="base-value">3</output></label><input id="base" type="range" min="2" max="10" value="3"><label for="height">Repetitions <output id="height-value">3</output></label><input id="height" type="range" min="1" max="5" value="3"><div class="operation-tabs" role="group" aria-label="Choose an operation"><button class="operation active" data-operation="power" type="button">Power</button><button class="operation" data-operation="tower" type="button">Power tower</button><button class="operation" data-operation="arrow" type="button">Arrow notation</button></div></div>
-        <div class="readout"><p class="readout-label">Your number</p><div id="number-display" class="number-display">27</div><p id="number-explanation">3 × 3 × 3. One operation, repeated 3 times.</p><div class="scale-line"><span id="scale-fill"></span></div><p class="scale-caption"><span>human scale</span><span id="scale-caption-value">small, but growing</span></p></div>
+        <div class="control-column"><label for="base">Base <output id="base-value">3</output></label><input id="base"
+            type="range" min="2" max="10" value="3"><label for="height">Repetitions <output
+              id="height-value">3</output></label><input id="height" type="range" min="1" max="5" value="3">
+          <div class="operation-tabs" role="group" aria-label="Choose an operation"><button class="operation active"
+              data-operation="power" type="button">Power</button><button class="operation" data-operation="tower"
+              type="button">Power tower</button><button class="operation" data-operation="arrow" type="button">Arrow
+              notation</button></div>
+        </div>
+        <div class="readout">
+          <p class="readout-label">Your number</p>
+          <div id="number-display" class="number-display">27</div>
+          <p id="number-explanation">3 × 3 × 3. One operation, repeated 3 times.</p>
+          <div class="scale-line"><span id="scale-fill"></span></div>
+          <p class="scale-caption"><span>human scale</span><span id="scale-caption-value">small, but growing</span></p>
+        </div>
       </div>
     </section>
 
     <section class="advanced-section" id="frontier">
-      <div class="wrap"><p class="section-number">05 / the frontier</p><div class="section-heading"><h2>When familiar notation breaks</h2><p>Advanced googology is less about “the biggest number” and more about designing a precise language for growth.</p></div>
-        <div class="advanced-grid"><article class="advanced-feature"><span class="feature-tag">A notation toolkit</span><h3>Knuth’s up-arrow notation</h3><p>One arrow means exponentiation. Two arrows mean tetration. More arrows mean repeating the previous operation. The notation stays finite while the growth becomes extreme.</p><div class="notation-row"><code>3 ↑ 3</code><span>=</span><strong>3<sup>3</sup></strong><code>3 ↑↑ 3</code><span>=</span><strong>3<sup>3<sup>3</sup></sup></strong></div></article><article class="advanced-feature dark-feature"><span class="feature-tag">A famous benchmark</span><h3>Graham’s number</h3><p>Graham’s number appears in a legitimate mathematical upper bound. Its definition uses a sequence of up-arrow expressions, where each stage uses the previous stage as its arrow count.</p><div class="sequence"><span>g₁ = 3 ↑↑↑↑ 3</span><span>g₂ = 3 ↑<sup>g₁</sup> 3</span><span>G = g₆₄</span></div></article></div>
-        <div class="warning-note"><span>!</span><p><strong>Important distinction:</strong> “Bigger” is not automatically “more advanced.” Some huge numbers are easy to define; some difficult definitions are valuable because they connect to logic and proofs. A definition must be unambiguous before it can be compared.</p></div>
+      <div class="wrap">
+        <p class="section-number">05 / the frontier</p>
+        <div class="section-heading">
+          <h2>When familiar notation breaks</h2>
+          <p>Advanced googology is less about “the biggest number” and more about designing a precise language for
+            growth.</p>
+        </div>
+        <div class="advanced-grid">
+          <article class="advanced-feature"><span class="feature-tag">A notation toolkit</span>
+            <h3>Knuth’s up-arrow notation</h3>
+            <p>One arrow means exponentiation. Two arrows mean tetration. More arrows mean repeating the previous
+              operation. The notation stays finite while the growth becomes extreme.</p>
+            <div class="notation-row">
+              <code>3 ↑ 3</code><span>=</span><strong>3<sup>3</sup></strong><code>3 ↑↑ 3</code><span>=</span><strong>3<sup>3<sup>3</sup></sup></strong>
+            </div>
+          </article>
+          <article class="advanced-feature dark-feature"><span class="feature-tag">A famous benchmark</span>
+            <h3>Graham’s number</h3>
+            <p>Graham’s number appears in a legitimate mathematical upper bound. Its definition uses a sequence of
+              up-arrow expressions, where each stage uses the previous stage as its arrow count.</p>
+            <div class="sequence"><span>g₁ = 3 ↑↑↑↑ 3</span><span>g₂ = 3 ↑<sup>g₁</sup> 3</span><span>G = g₆₄</span>
+            </div>
+          </article>
+        </div>
+        <div class="warning-note"><span>!</span>
+          <p><strong>Important distinction:</strong> “Bigger” is not automatically “more advanced.” Some huge numbers
+            are easy to define; some difficult definitions are valuable because they connect to logic and proofs. A
+            definition must be unambiguous before it can be compared.</p>
+        </div>
       </div>
     </section>
 
-    <section class="wrap closing-section"><p class="section-number">06 / take away</p><h2>Googology is a study of <em>recipes.</em></h2><p>Once you see a number as an operation and a number of repetitions, infinity stops being a vague wall. There is always another exact language to learn, another growth rate to compare, another boundary to investigate.</p><a class="button button-dark" href="#top">Return to the beginning ↑</a></section>
+    <section class="wrap closing-section">
+      <p class="section-number">06 / take away</p>
+      <h2>Googology is a study of <em>recipes.</em></h2>
+      <p>Once you see a number as an operation and a number of repetitions, infinity stops being a vague wall. There is
+        always another exact language to learn, another growth rate to compare, another boundary to investigate.</p><a
+        class="button button-dark" href="#top">Return to the beginning ↑</a>
+    </section>
   </main>
 
-  <footer class="site-footer"><div class="wrap"><span>BEYOND COUNTING</span><span>Made for curious minds · 2026</span><a href="#top">Back to top ↑</a></div></footer>
+  <footer class="site-footer">
+    <div class="wrap"><span>BEYOND COUNTING</span><span>Made for curious minds · 2026</span><a href="#top">Back to top
+        ↑</a></div>
+  </footer>
 </body>
+
 </html>

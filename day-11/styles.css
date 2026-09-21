@@ -1,12 +1,12 @@
 :root {
-  --ink: #182321;
-  --muted: #68736c;
-  --paper: #f5f3ed;
-  --cream: #ebe7da;
-  --lime: #d9f36a;
-  --coral: #f26b51;
-  --teal: #1e746c;
-  --line: rgba(24, 35, 33, .2);
+  --ink: #15253d;
+  --muted: #60748c;
+  --paper: #f4f8fc;
+  --cream: #e5eff8;
+  --lime: #bde8f5;
+  --coral: #2f80ed;
+  --teal: #145a9c;
+  --line: rgba(21, 37, 61, .2);
   --serif: "Fraunces", Georgia, serif;
   --sans: "Space Grotesk", sans-serif;
   --mono: "DM Mono", monospace;
@@ -416,18 +416,8 @@ h3 {
   padding: 22px;
 }
 
-.ladder-card-hot {
-  background: var(--coral);
-  border-color: var(--coral);
-  color: white;
-}
-
 .step {
   color: var(--teal);
-}
-
-.ladder-card-hot .step {
-  color: white;
 }
 
 .ladder-value {
@@ -443,10 +433,6 @@ h3 {
 .ladder-card p {
   color: var(--muted);
   font-size: .9rem;
-}
-
-.ladder-card-hot p {
-  color: #fff4ee;
 }
 
 .named-numbers {
