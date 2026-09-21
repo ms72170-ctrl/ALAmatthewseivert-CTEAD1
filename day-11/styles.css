@@ -435,6 +435,76 @@ h3 {
   font-size: .9rem;
 }
 
+.hyper-content {
+  min-width: 0;
+}
+
+.section-deck {
+  color: var(--muted);
+  max-width: 700px;
+}
+
+.hyper-cards {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 45px;
+}
+
+.hyper-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  min-height: 330px;
+  padding: 22px;
+}
+
+.hyper-card .step {
+  color: var(--coral);
+}
+
+.hyper-symbol {
+  color: var(--teal);
+  font: 500 clamp(1.3rem, 1.8vw, 2rem) var(--mono);
+  margin: 46px 0 18px;
+  white-space: nowrap;
+}
+
+.hyper-symbol sup {
+  font-size: .55em;
+}
+
+.hyper-card p {
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+.hyper-tag {
+  color: var(--teal);
+  display: block;
+  font: .58rem var(--mono);
+  letter-spacing: .08em;
+  margin-top: 25px;
+}
+
+.higher-note {
+  align-items: flex-start;
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 24px;
+}
+
+.higher-note p {
+  color: var(--muted);
+  margin: 0;
+  max-width: 700px;
+}
+
+.higher-note strong {
+  color: var(--ink);
+}
+
 .named-numbers {
   display: block;
 }
@@ -707,7 +777,8 @@ h3 {
   }
 
   .definition-notes,
-  .ladder-cards {
+  .ladder-cards,
+  .hyper-cards {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -744,7 +815,8 @@ h3 {
   }
 
   .definition-notes,
-  .ladder-cards {
+  .ladder-cards,
+  .hyper-cards {
     grid-template-columns: 1fr;
   }
 
