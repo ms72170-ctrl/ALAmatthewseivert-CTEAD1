@@ -1,11 +1,11 @@
 :root {
-  --ink: #15253d;
-  --muted: #60748c;
-  --paper: #f4f8fc;
-  --cream: #e5eff8;
-  --lime: #bde8f5;
-  --coral: #2f80ed;
-  --teal: #145a9c;
+  --ink: #0066ff;
+  --muted: #828282;
+  --paper: #ffffff;
+  --cream: #edf6ff;
+  --lime: #c8f2ff;
+  --coral: #378eff;
+  --teal: #00529e;
   --line: rgba(21, 37, 61, .2);
   --serif: "Fraunces", Georgia, serif;
   --sans: "Space Grotesk", sans-serif;
