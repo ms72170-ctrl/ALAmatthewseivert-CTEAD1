@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="calculator-shell">
+    <section class="calculator" aria-label="Calculator">
+      <header class="calculator-header">
+        <div>
+          <p class="eyebrow">Calculator</p>
+          <h1>Calculator</h1>
+        </div>
+        <button class="theme-button" id="themeButton" type="button" aria-label="Toggle calculator theme">◐</button>
+      </header>
+
+      <div class="display" aria-live="polite">
+        <div class="display-expression" id="expression">Ready</div>
+        <div class="display-value" id="display">0</div>
+      </div>
+
+      <div class="calculator-grid">
+        <button class="key key-function" data-action="clear" type="button">AC</button>
+        <button class="key key-function" data-action="delete" type="button"
+          aria-label="Delete last character">DEL</button>
+        <button class="key key-function" data-value="%" type="button">%</button>
+        <button class="key key-operator" data-value="÷" type="button" aria-label="Divide">÷</button>
+
+        <button class="key" data-value="7" type="button">7</button>
+        <button class="key" data-value="8" type="button">8</button>
+        <button class="key" data-value="9" type="button">9</button>
+        <button class="key key-operator" data-value="×" type="button" aria-label="Multiply">×</button>
+
+        <button class="key" data-value="4" type="button">4</button>
+        <button class="key" data-value="5" type="button">5</button>
+        <button class="key" data-value="6" type="button">6</button>
+        <button class="key key-operator" data-value="−" type="button" aria-label="Subtract">−</button>
+
+        <button class="key" data-value="1" type="button">1</button>
+        <button class="key" data-value="2" type="button">2</button>
+        <button class="key" data-value="3" type="button">3</button>
+        <button class="key key-operator" data-value="+" type="button">+</button>
+
+        <button class="key key-zero" data-value="0" type="button">0</button>
+        <button class="key" data-value="." type="button">.</button>
+        <button class="key key-equals" data-action="calculate" type="button">=</button>
+      </div>
+
+      <footer class="calculator-footer">
+        <span>Use your keyboard too</span>
+        <span class="shortcut">Enter = calculate</span>
+      </footer>
+    </section>
+
+    <aside class="customization-note">
+      <span class="note-mark">✦</span>
+      <div>
+        <strong>Your customization area</strong>
+        <p>Change the colors in <code>styles.css</code> or the title text above to make this tool yours.</p>
+      </div>
+    </aside>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

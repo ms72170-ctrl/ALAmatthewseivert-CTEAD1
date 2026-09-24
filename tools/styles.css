@@ -1,0 +1,245 @@
+/* CUSTOMIZE HERE: change these values to give the calculator your own look. */
+:root {
+  --ink: #17201d;
+  --muted: #718079;
+  --paper: #f4f1e9;
+  --panel: #fffdf8;
+  --line: #dedbd1;
+  --accent: #d85c3f;
+  --accent-dark: #a23c2b;
+  --operator: #dfe9e1;
+  --shadow: 0 24px 70px rgba(40, 51, 44, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, rgba(216, 92, 63, 0.12), transparent 38%),
+    radial-gradient(circle at 92% 12%, rgba(152, 182, 157, 0.25), transparent 28%);
+  content: '';
+}
+
+.calculator-shell {
+  width: min(100% - 32px, 440px);
+  margin: 0 auto;
+  padding: 48px 0 28px;
+}
+
+.calculator {
+  padding: 26px;
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.calculator-header,
+.calculator-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: var(--accent);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 2.7rem);
+  line-height: 1;
+}
+
+.theme-button {
+  width: 42px;
+  height: 42px;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.display {
+  min-height: 132px;
+  margin: 26px 0 16px;
+  padding: 18px;
+  overflow: hidden;
+  text-align: right;
+  background: #e8eee8;
+  border-radius: 6px;
+}
+
+.display-expression {
+  min-height: 23px;
+  overflow: hidden;
+  color: var(--muted);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.display-value {
+  margin-top: 8px;
+  font-size: clamp(2.5rem, 12vw, 4rem);
+  line-height: 1;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
+}
+
+.key {
+  min-height: 60px;
+  color: var(--ink);
+  background: #f7f4ed;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  cursor: pointer;
+  font: 600 1.25rem 'Trebuchet MS', sans-serif;
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+.key:hover {
+  background: #eeebe2;
+}
+
+.key:active {
+  transform: translateY(2px);
+}
+
+.key:focus-visible,
+.theme-button:focus-visible {
+  outline: 3px solid rgba(216, 92, 63, 0.35);
+  outline-offset: 2px;
+}
+
+.key-function {
+  color: var(--accent-dark);
+  background: #f8e6df;
+  font-size: 0.85rem;
+}
+
+.key-operator {
+  background: var(--operator);
+  font-size: 1.5rem;
+}
+
+.key-equals {
+  color: white;
+  background: var(--accent);
+  border-color: var(--accent);
+  font-size: 1.6rem;
+}
+
+.key-equals:hover {
+  background: var(--accent-dark);
+}
+
+.key-zero {
+  grid-column: span 2;
+}
+
+.calculator-footer {
+  margin-top: 18px;
+  color: var(--muted);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 0.68rem;
+}
+
+.shortcut {
+  color: var(--accent-dark);
+}
+
+.customization-note {
+  display: flex;
+  gap: 12px;
+  margin: 16px 4px 0;
+  color: var(--muted);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.customization-note p {
+  margin: 3px 0 0;
+}
+
+.customization-note strong {
+  color: var(--ink);
+}
+
+.note-mark {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+code {
+  color: var(--accent-dark);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 420px) {
+  .calculator-shell {
+    padding-top: 20px;
+  }
+
+  .calculator {
+    padding: 18px;
+  }
+
+  .key {
+    min-height: 55px;
+  }
+
+  .calculator-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+body.dark-mode {
+  --ink: #f7f4ed;
+  --muted: #aab6ad;
+  --paper: #1b2521;
+  --panel: #26332c;
+  --line: #46544b;
+  --operator: #34483e;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .display {
+  background: #17201c;
+}
+
+body.dark-mode .key {
+  background: #304038;
+}
+
+body.dark-mode .key-function {
+  background: #58372f;
+}
