@@ -1,13 +1,13 @@
 /* CUSTOMIZE HERE: change these values to give the calculator your own look. */
 :root {
-  --ink: #17201d;
-  --muted: #718079;
-  --paper: #f4f1e9;
-  --panel: #fffdf8;
-  --line: #dedbd1;
-  --accent: #d85c3f;
-  --accent-dark: #a23c2b;
-  --operator: #dfe9e1;
+  --ink: #000000;
+  --muted: #1c306e;
+  --paper: #ffffff;
+  --panel: #efefef;
+  --line: #d5d5d5;
+  --accent: #0059ff;
+  --accent-dark: #0000ff;
+  --operator: #e9ffee;
   --shadow: 0 24px 70px rgba(40, 51, 44, 0.16);
 }
 
